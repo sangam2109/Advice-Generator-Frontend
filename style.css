@@ -22,16 +22,16 @@ img{
 body {
   background-color: var(--dark-blue);
   height: 100vh;
-  display: flex;
-  justify-content: center;
   max-width: var(--width-desktop);
   align-items: center;
   font-size: 28px;
   font-family: "Manrope", sans-serif;
 }
 .container {
-    display: flex;
-flex-direction: column;
+  margin-top:9.5rem;
+  margin-inline:auto ;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   background-color: var(--dark-garyish-blue);
   padding: 2.5rem 2rem 0;
