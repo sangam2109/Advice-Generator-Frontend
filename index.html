@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Advice generator app</title>
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="advice-id">
+      <!-- Advice #Advice ID goes here -->
+      ADVICE # <span id="advice-id"></span>
+    </div>
+    <blockquote id="text">
+      <p id="advice-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, nobis!</p>
+    </blockquote>
+    <picture>
+      <source class="desktop" media="(min-width: 601px)" srcset="images/pattern-divider-desktop.svg" >
+      <source class="mobile" media="(max-width: 550px)" srcset="images/pattern-divider-mobile.svg" >
+      <img class="line" src="images/pattern-divider-desktop.svg" alt="Icon divider" >
+    </picture>
+    <div class="dice-box">
+      <button id="dice" onclick="fetchquote()"><img src="images/icon-dice.svg" alt="Dice to generate new advice"></button>
+    </div>
+      
+    
+
+    <!-- "Advice text goes here" -->
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Sangam Arora</a>.
+  </div>
+</body>
+
+</html>
