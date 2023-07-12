@@ -1,10 +1,10 @@
 // Store the speech synthesis object
 const synth = window.speechSynthesis;
 
-// Store the text element
+
 const adviceText = document.getElementById('advice-text');
 
-// Store the play and pause buttons
+
 const playButton = document.getElementById('play');
 const pauseButton = document.getElementById('pause');
 
@@ -28,7 +28,7 @@ function pauseSpeech() {
     // Check if speech synthesis is supported
     if ('speechSynthesis' in window) {
         // Pause the speech
-        synth.pause();
+        synth.cancel();
     }
 }
 
