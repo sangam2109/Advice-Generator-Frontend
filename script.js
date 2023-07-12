@@ -1,3 +1,41 @@
+// Store the speech synthesis object
+const synth = window.speechSynthesis;
+
+// Store the text element
+const adviceText = document.getElementById('advice-text');
+
+// Store the play and pause buttons
+const playButton = document.getElementById('play');
+const pauseButton = document.getElementById('pause');
+
+// SpeechSynthesisUtterance object to hold the current speech
+let currentSpeech = null;
+
+// Function to play the speech
+function playSpeech() {
+    // Check if speech synthesis is supported
+    if ('speechSynthesis' in window) {
+        // Create a new SpeechSynthesisUtterance
+        currentSpeech = new SpeechSynthesisUtterance(adviceText.textContent);
+
+        // Play the speech
+        synth.speak(currentSpeech);
+    }
+}
+
+// Function to pause the speech
+function pauseSpeech() {
+    // Check if speech synthesis is supported
+    if ('speechSynthesis' in window) {
+        // Pause the speech
+        synth.pause();
+    }
+}
+
+// Add event listeners to the play and pause buttons
+playButton.addEventListener('click', playSpeech);
+pauseButton.addEventListener('click', pauseSpeech);
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -22,7 +60,6 @@ async function fetchquote() {
     const indx = Math.floor(Math.random() * allQuotes.length);
     const quotePosition = document.getElementById("advice-text")
     const quote = allQuotes[indx].text;
-    console.log(quote)
-    console.log(quote.length)
     quotePosition.innerHTML = quote;
 }
+
